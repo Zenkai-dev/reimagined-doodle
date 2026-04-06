@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid p-0">
+        <!-- Sidebar -->
+        <div class="sidebar bg-dark text-white p-3">
+            <h4>[Insert Title Here]</h4>
+            <hr>
+
+            <!-- World View -->
+            <div class="mb-3" id="worldView">
+                <p class="text-uppercase text-secondary small mb-1">World View</p>
+
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a href="/assets/html/alliances.html" class="nav-link text-white px-2 py-1">Alliances</a></li>
+                    <li class="nav-item"><a href="assets/html/construction.html" class="nav-link text-white px-2 py-1">[Insert Item Here]</a></li>
+                </ul>
+            </div>
+            <hr class="border-secondary opacity-25">
+
+            <!-- Government -->
+            <div class=" hide mb-3" id="government">
+                <p class="text-uppercase text-secondary small mb-1">Government</p>
+
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a href="/assets/html/nationView.html" class="nav-link text-white px-2 py-1">Nation View</a></li>
+                    <li class="nav-item"><a href="assets/html/construction.html" class="nav-link text-white px-2 py-1">Policies</a></li>
+                </ul>
+            </div>
+            <hr class="hide border-secondary opacity-25">
+
+            <!-- Military -->
+            <div class=" hide mb-3" id="military">
+                <p class="text-uppercase text-secondary small mb-1">Military</p>
+            
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a href="assets/html/militaryOverview.html" class="nav-link text-white px-2 py-1">Military Overview</a></li>
+                    <li class="nav-item"><a href="assets/html/construction.html" class="nav-link text-white px-2 py-1">[Insert Item Here]</a></li>
+                </ul>
+            </div>
+
+
+            <div class="sidebar-footer mt-auto pt-3 border-top border-secondary">
+                <p class="small text-secondary mb-0">Developed by <span class="text-white">Pyro9k</span></p>
+                <p class="small text-secondary mb-1">Server Time: <span class="text-white" id="serverTime"></span></p>
+                
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main d-flex flex-column">
+
+            <!-- Topbar -->
+            <nav class="hide navbar navbar-dark bg-dark px-3 shadow-sm topbar d-flex flex-column align-items-stretch">
+            
+                <div class="d-flex justify-content-between align-items-center w-100 py-2">
+                    <div class="navbar-brand-wrapper">
+                        <span class="navbar-brand mb-0 h5">[Insert Title Here]</span>
+                    </div>
+            
+                    <div class="topbar-right">
+                        <button class="btn btn-outline-danger btn-sm py-2" >Logout</button>
+                    </div>
+                </div>
+            
+                <div class="d-flex justify-content-center border-secondary mt-1 pt-1">
+                    <div class="resource-item mx-3">
+                        <small class="text-secondary">Money:</small>
+                        <small class="text-success fw-bold">$50,000</small>
+                    </div>
+                    <div class="resource-item mx-3">
+                        <small class="text-secondary">Food:</small>
+                        <small class="text-warning fw-bold">1,200</small>
+                    </div>
+                    <div class="resource-item mx-3">
+                        <small class="text-secondary">Population:</small>
+                        <small class="text-info fw-bold">85,000</small>
+                    </div>
+                </div>
+            
+            </nav>
+
+            
+                <!-- Main card -->
+                <div class="p-4">
+            
+                    <div class="bg-white p-5 rounded shadow-sm mb-4 text-center mx-auto" style="max-width: 800px;">
+                        <h1 class="display-5 fw-bold" >Welcome to [Insert Title Here]</h1>
+                        <p class="lead text-muted">[Insert Description Here]</p>
+                        <div class="d-grid gap-2 d-md-flex justify-content-md-center mt-4">
+                            <button class="btn btn-primary btn-lg px-4 me-md-2" type="button"><a href="assets/html/createNation.html" class="text-white text-decoration-none">Create Nation</a></button>
+                            <button class="btn btn-outline-secondary btn-lg px-4" type="button">Login</button>
+                        </div>
+                    </div>
+
+                    <!-- Info Cards -->
+                    <div class="row mx-auto" style="max-width: 800px;">
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-secondary small fw-bold">Latest News</h5>
+                                    <hr>
+                                    <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam in dui
+                                        mauris. Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus
+                                        rhoncus ut eleifend nibh porttitor.</p>
+                                    <p class="card-text text-muted small">Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                </div>
+                            </div>
+                        </div>
+            
+                        <div class="col-md-6 mb-4">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-body">
+                                    <h5 class="card-title text-uppercase text-secondary small fw-bold">Recent Updates</h5>
+                                    <hr>
+                                    <p class="card-text">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <a href="#" class="btn btn-link p-0 text-decoration-none">Read more</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            
+                </div>
+        </div>
+
+    </div>
+
+    <!-- Bootstrap and custom stylesheets -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="assets/js/index.js">
+
+    </script>
+</body>
+
+</html>

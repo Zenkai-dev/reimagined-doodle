@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Nation</title>
+    <!-- Bootstrap Stylesheet -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body class="bg-light">
+
+    <div class="container-fluid p-0">
+        <!-- Sidebar -->
+        <div class="sidebar bg-dark text-white p-3">
+            <h4>[Insert Title Here]</h4>
+            <hr>
+        
+            <!-- World View -->
+            <div class="mb-3" id="worldView">
+                <p class="text-uppercase text-secondary small mb-1">World View</p>
+        
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a href="../html/alliances.html" class="nav-link text-white px-2 py-1">Alliances</a>
+                    </li>
+                    <li class="nav-item"><a href="../html/construction.html" class="nav-link text-white px-2 py-1">[Insert Item
+                            Here]</a></li>
+                </ul>
+            </div>
+            <hr class="border-secondary opacity-25">
+        
+            <!-- Government -->
+            <div class="hide  mb-3" id="government">
+                <p class="text-uppercase text-secondary small mb-1">Government</p>
+        
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item fs-bolder"><a href="../html/nationView.html"
+                            class="nav-link text-white px-2 py-1 ">Nation
+                            View</a></li>
+                    <li class="nav-item"><a href="../html/construction.html" class="nav-link text-white px-2 py-1">Policies</a>
+                    </li>
+                </ul>
+            </div>
+            <hr class="hide border-secondary opacity-25">
+        
+            <!-- Military -->
+            <div class="hide  mb-3" id="military">
+                <p class="text-uppercase text-secondary small mb-1">Military</p>
+        
+                <ul class="nav flex-column ms-3">
+                    <li class="nav-item"><a href="../html/militaryOverview.html"
+                            class="nav-link text-white px-2 py-1">Military Overview</a></li>
+                    <li class="nav-item"><a href="../html/construction.html" class="nav-link text-white px-2 py-1">[Insert Item
+                            Here]</a></li>
+                </ul>
+            </div>
+        
+        
+            <div class="sidebar-footer mt-auto pt-3 border-top border-secondary">
+                <p class="small text-secondary mb-0">Developed by <span class="text-white">Pyro9k</span></p>
+                <p class="small text-secondary mb-1">Server Time: <span class="text-white" id="serverTime"></span></p>
+        
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="main d-flex flex-column">
+
+            <!-- Topbar -->
+            <nav class="hide navbar navbar-dark bg-dark px-3 shadow-sm topbar d-flex flex-column align-items-stretch">
+
+                <div class="d-flex justify-content-between align-items-center w-100 py-2">
+                    <div class="navbar-brand-wrapper">
+                        <span class="navbar-brand mb-0 h5">[Insert Title Here]</span>
+                    </div>
+
+                    <div class="topbar-right">
+                        <button class="btn btn-outline-danger btn-sm py-2">Logout</button>
+                    </div>
+                </div>
+
+                <div class="d-flex justify-content-center border-secondary mt-1 pt-1">
+                    <div class="resource-item mx-3">
+                        <small class="text-secondary">Money:</small>
+                        <small class="text-success fw-bold">$50,000</small>
+                    </div>
+                    <div class="resource-item mx-3">
+                        <small class="text-secondary">Food:</small>
+                        <small class="text-warning fw-bold">1,200</small>
+                    </div>
+                    <div class="resource-item mx-3">
+                        <small class="text-secondary">Population:</small>
+                        <small class="text-info fw-bold">85,000</small>
+                    </div>
+                </div>
+
+            </nav>
+
+            <!-- Form -->
+            <div class="p-4">
+                <div class="card border-0 shadow-sm mx-auto" style="max-width: 800px;">
+                    <div class="card-body p-5">
+                        <h2 class="fw-bold mb-4">Create your State</h2>
+                        <hr class="mb-4">
+            
+                        <form action="#" method="POST">
+                            <div class="row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="nationName" class="form-label fw-bold small text-uppercase">State Name</label>
+                                    <input type="text" class="form-control" id="nationName" placeholder="Enter nation name"
+                                        required>
+                                </div>
+            
+                                <div class="col-md-6 mb-3">
+                                    <label for="leaderName" class="form-label fw-bold small text-uppercase">Leader Name</label>
+                                    <input type="text" class="form-control" id="leaderName" placeholder="Enter leader name"
+                                        required>
+                                </div>
+                            </div>
+            
+                            <div class="mb-4">
+                                <label for="flagUpload" class="form-label fw-bold small text-uppercase">State Flag (500 x
+                                    300)</label>
+                                <input class="form-control" type="file" id="flagUpload" accept="image/*">
+                                <div class="mt-2 text-center bg-light rounded border d-flex align-items-center justify-content-center"
+                                    style="width: 100%; height: 300px; max-width: 500px; margin: 0 auto; overflow: hidden;">
+                                    <span class="text-muted small">Flag Preview Area (500x300)</span>
+                                </div>
+                            </div>
+            
+                            <div class="mb-3">
+                                <label for="biomeSelect" class="form-label fw-bold small text-uppercase">Choose your Biome</label>
+                                <select class="form-select" id="biomeSelect" required>
+                                    <option value="" selected disabled hidden>Choose a starting biome...</option>
+                                    <option value="forest">Forest</option>
+                                    <option value="mountains">Mountains</option>
+                                    <option value="desert">Desert</option>
+                                    <option value="grasslands">Grasslands</option>
+                                    <option value="swamp">Swamp</option>
+                                </select>
+                            </div>
+            
+                            <div class="mb-4 p-3 bg-light rounded border-start border-primary border-4">
+                                <p class="mb-0 small text-muted" id="biomeDescription">
+                                    <strong id="biomeBold">Note:</strong> Please select a biome to see its unique traits and resource bonuses.
+                                </p>
+                            </div>
+            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">Establish Sovereignty</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Bootstrap and custom stylesheets -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+
+    <script src="../js/nation.js">
+
+    </script>
+    <script src="../js/index.js">
+
+    </script>
+</body>
+
+</html>
